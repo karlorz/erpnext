@@ -65,7 +65,9 @@ def fin(args):
 
 
 def setup_demo(args):
-	if args.get("setup_demo"):
+	# Robust check for demo setup - handles integer (1), boolean (True), and string ("1") values
+	demo_value = args.get("setup_demo")
+	if demo_value and (demo_value is True or demo_value == 1 or demo_value == "1"):
 		frappe.enqueue(setup_demo_data, enqueue_after_commit=True, at_front=True)
 
 
