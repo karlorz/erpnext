@@ -14,6 +14,7 @@ from erpnext.accounts.utils import get_fiscal_year
 from erpnext.buying.doctype.purchase_order.purchase_order import make_purchase_invoice
 from erpnext.selling.doctype.sales_order.sales_order import make_sales_invoice
 from erpnext.setup.setup_wizard.operations.install_fixtures import create_bank_account
+from erpnext.setup.utils import ensure_all_departments_root, resolve_company_context
 
 
 def setup_demo_data():
@@ -60,9 +61,17 @@ def create_demo_company():
 	company = frappe.db.get_all("Company")[0].name
 	company_doc = frappe.get_doc("Company", company)
 
+	# Check if demo company already exists
+	demo_company_name = company_doc.company_name + " (Demo)"
+	if frappe.db.exists("Company", demo_company_name):
+		# Demo company already exists, return its name
+		frappe.db.set_single_value("Global Defaults", "demo_company", demo_company_name)
+		frappe.db.set_default("company", demo_company_name)
+		return demo_company_name
+
 	# Make a dummy company
 	new_company = frappe.new_doc("Company")
-	new_company.company_name = company_doc.company_name + " (Demo)"
+	new_company.company_name = demo_company_name
 	new_company.abbr = company_doc.abbr + "D"
 	new_company.enable_perpetual_inventory = 1
 	new_company.default_currency = company_doc.default_currency
@@ -90,7 +99,39 @@ def process_masters():
 
 
 def create_demo_record(doctype):
-	frappe.get_doc(doctype).insert(ignore_permissions=True)
+	try:
+		doc = frappe.get_doc(doctype)
+		
+		# Special handling for Department to ensure "All Departments" exists
+		if doc.doctype == "Department" and doc.get("parent_department") == "All Departments":
+			company = resolve_company_context(doc)
+			ensure_all_departments_root(company)
+		
+		doc.insert(ignore_permissions=frappe.flags.in_setup_wizard or frappe.flags.in_install)
+	except frappe.DuplicateEntryError:
+		# Skip if record already exists
+		pass
+	except frappe.LinkValidationError as e:
+		# Handle missing parent departments gracefully
+		if "Could not find Parent Department: All Departments" in str(e):
+			company = resolve_company_context(doc)
+			if ensure_all_departments_root(company):
+				# Retry the original document insertion
+				try:
+					doc.insert(ignore_permissions=frappe.flags.in_setup_wizard or frappe.flags.in_install)
+				except Exception as retry_exception:
+					frappe.log_error(
+						f"Failed to create department after ensuring parent exists: {doc.get('department_name', 'Unknown')}. Error: {str(retry_exception)}",
+						"Department Creation Error"
+					)
+			else:
+				frappe.log_error(
+					f"Failed to create 'All Departments' root for company: {company}",
+					"Department Creation Error"
+				)
+		else:
+			# Re-raise other LinkValidationErrors
+			raise
 
 
 def make_transactions(company):

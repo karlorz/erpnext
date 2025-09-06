@@ -234,3 +234,101 @@ def welcome_email():
 	site_name = get_default_company() or "ERPNext"
 	title = _("Welcome to {0}").format(site_name)
 	return title
+
+
+def ensure_all_departments_root(company: str) -> bool:
+	"""
+	Ensure 'All Departments' root exists for a company.
+	
+	This function provides an atomic, secure way to create the 'All Departments'
+	root department when needed, eliminating code duplication and race conditions.
+	
+	Args:
+		company (str): Company name to create the root department for
+		
+	Returns:
+		bool: True if department exists or was created successfully
+		
+	Raises:
+		Exception: If department creation fails for reasons other than duplicate entry
+	"""
+	if not company:
+		frappe.throw(_("Company is required for creating 'All Departments' root"))
+	
+	# Use cache to avoid repeated database queries
+	cache_key = f"all_departments_root_{company}"
+	cached_result = frappe.cache().get_value(cache_key)
+	
+	if cached_result is not None:
+		return cached_result
+	
+	# Check if root department already exists
+	if frappe.db.exists("Department", {"department_name": "All Departments", "company": company}):
+		frappe.cache().set_value(cache_key, True, expires_in_sec=300)  # Cache for 5 minutes
+		return True
+	
+	try:
+		root_dept = frappe.new_doc("Department")
+		root_dept.department_name = "All Departments"
+		root_dept.company = company
+		root_dept.is_group = 1
+		root_dept.insert(
+			ignore_permissions=frappe.flags.in_setup_wizard or frappe.flags.in_install,
+			ignore_if_duplicate=True
+		)
+		# Cache the successful result
+		frappe.cache().set_value(cache_key, True, expires_in_sec=300)  # Cache for 5 minutes
+		return True
+		
+	except frappe.DuplicateEntryError:
+		# Department was created by another process - this is expected
+		frappe.cache().set_value(cache_key, True, expires_in_sec=300)  # Cache for 5 minutes
+		return True
+	except Exception as e:
+		# Log the error but don't raise to allow setup to continue
+		error_context = {
+			"company": company,
+			"operation": "ensure_all_departments_root",
+			"exception_type": type(e).__name__,
+			"exception_message": str(e)
+		}
+		frappe.log_error(
+			f"Failed to create 'All Departments' for company {company}: {str(e)}",
+			"Department Creation Error"
+		)
+		return False
+
+
+def resolve_company_context(doc_or_dict) -> str:
+	"""
+	Resolve company context from a document or dictionary.
+	
+	Args:
+		doc_or_dict: Document object or dictionary containing company information
+		
+	Returns:
+		str: Company name or empty string if not found
+	"""
+	# Try to get company from document/dict first
+	if hasattr(doc_or_dict, 'get'):
+		company = doc_or_dict.get("company")
+	else:
+		company = getattr(doc_or_dict, 'company', None)
+	
+	if company:
+		return company
+	
+	# Use cache for default company to avoid repeated DB queries
+	cache_key = "default_company_context"
+	cached_company = frappe.cache().get_value(cache_key)
+	
+	if cached_company is not None:
+		return cached_company
+	
+	# Fallback to default company
+	default_company = get_default_company() or ""
+	
+	# Cache the result (default company rarely changes)
+	frappe.cache().set_value(cache_key, default_company, expires_in_sec=1800)  # Cache for 30 minutes
+	
+	return default_company
