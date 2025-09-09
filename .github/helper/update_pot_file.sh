@@ -17,12 +17,12 @@ bench generate-pot-file --app erpnext
 cd ./apps/erpnext || exit
 
 echo "Configuring git user..."
-git config user.email "developers@erpnext.com"
-git config user.name "frappe-pr-bot"
+git config user.email "142769090+karlorz@users.noreply.github.com"
+git config user.name "karlorz"
 
 echo "Setting the correct git remote..."
 # Here, the git remote is a local file path by default. Let's change it to the upstream repo.
-git remote set-url upstream https://github.com/frappe/erpnext.git
+git remote set-url upstream https://github.com/karlorz/erpnext.git
 
 echo "Creating a new branch..."
 isodate=$(date -u +"%Y-%m-%d")
@@ -37,4 +37,4 @@ gh auth setup-git
 git push -u upstream "${branch_name}"
 
 echo "Creating a PR..."
-gh pr create --fill --base "${BASE_BRANCH}" --head "${branch_name}" --reviewer ${PR_REVIEWER} -R frappe/erpnext
+gh pr create --fill --base "${BASE_BRANCH}" --head "${branch_name}" --reviewer ${PR_REVIEWER} -R karlorz/erpnext
