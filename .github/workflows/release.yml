@@ -4,10 +4,7 @@
 
 name: Generate Semantic Release (DISABLED)
 on:
-  # Commented out to disable automatic triggers  
-  # push:
-  #   branches:
-  #     - version-15-dev
+  workflow_dispatch: # Only manual trigger allowed
 
 jobs:
   release:
