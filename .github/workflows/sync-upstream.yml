@@ -67,7 +67,7 @@ jobs:
         run: |
           # Set target branch based on source branch
           if [ "${{ matrix.branch }}" == "version-15" ]; then
-            TARGET_BRANCH="version-dev"
+            TARGET_BRANCH="version-15-dev"
           elif [ "${{ matrix.branch }}" == "develop" ]; then
             TARGET_BRANCH="develop-next"
           fi
