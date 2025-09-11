@@ -62,22 +62,29 @@ jobs:
             fi
           fi
 
-      - name: Create PR to merge into dev branch
-        if: matrix.branch == 'version-15'
+      - name: Create PR to merge synced changes into dev branch
+        if: matrix.branch == 'version-15' || matrix.branch == 'develop'
         run: |
-          # Check if there are differences between version-15 and version-15-dev
-          git fetch origin version-15-dev
-          if ! git diff --quiet origin/version-15..origin/version-15-dev; then
-            echo "Creating PR to merge upstream changes into version-15-dev"
+          # Set target branch based on source branch
+          if [ "${{ matrix.branch }}" == "version-15" ]; then
+            TARGET_BRANCH="version-dev"
+          elif [ "${{ matrix.branch }}" == "develop" ]; then
+            TARGET_BRANCH="develop-next"
+          fi
+          
+          # Check if there are differences between source and target branches
+          git fetch origin $TARGET_BRANCH
+          if ! git diff --quiet origin/${{ matrix.branch }}..origin/$TARGET_BRANCH; then
+            echo "Creating PR to merge upstream changes into $TARGET_BRANCH"
             
             gh pr create \
-              --title "Sync upstream changes from version-15 to version-15-dev" \
-              --body "This PR syncs the latest upstream changes from version-15 branch into version-15-dev.
+              --title "Sync upstream changes from ${{ matrix.branch }} to $TARGET_BRANCH" \
+              --body "This PR syncs the latest upstream changes from ${{ matrix.branch }} branch into $TARGET_BRANCH.
 
             Please review the changes and resolve any conflicts if present.
 
             **Changes include:**
-            - Latest upstream commits from frappe/erpnext version-15 branch  
+            - Latest upstream commits from frappe/erpnext ${{ matrix.branch }} branch  
             - Automated sync from upstream repository
 
             **Next steps:**
@@ -85,11 +92,11 @@ jobs:
             2. Resolve any conflicts if present
             3. Test the merged changes  
             4. Merge when ready" \
-              --head version-15 \
-              --base version-15-dev \
+              --head ${{ matrix.branch }} \
+              --base $TARGET_BRANCH \
               --assignee ${{ github.actor }} || echo "PR already exists or no changes to sync"
           else
-            echo "No differences found between version-15 and version-15-dev"
+            echo "No differences found between ${{ matrix.branch }} and $TARGET_BRANCH"
           fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
