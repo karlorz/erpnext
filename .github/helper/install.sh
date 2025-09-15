@@ -11,7 +11,7 @@ sudo apt install libcups2-dev redis-server mariadb-client libmariadb-dev
 pip install frappe-bench
 
 githubbranch=${GITHUB_BASE_REF:-${GITHUB_REF##*/}}
-frappeuser=${FRAPPE_USER:-"frappe"}
+frappeuser=${FRAPPE_USER:-"karlorz"}
 frappecommitish=${FRAPPE_BRANCH:-$githubbranch}
 
 mkdir frappe
