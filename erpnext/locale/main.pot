@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ERPNext VERSION\n"
 "Report-Msgid-Bugs-To: hello@frappe.io\n"
-"POT-Creation-Date: 2025-09-14 09:34+0000\n"
-"PO-Revision-Date: 2025-09-14 09:34+0000\n"
+"POT-Creation-Date: 2025-09-21 09:35+0000\n"
+"PO-Revision-Date: 2025-09-21 09:35+0000\n"
 "Last-Translator: hello@frappe.io\n"
 "Language-Team: hello@frappe.io\n"
 "MIME-Version: 1.0\n"
@@ -1263,8 +1263,8 @@ msgstr ""
 #: erpnext/accounts/doctype/unreconcile_payment_entries/unreconcile_payment_entries.json
 #: erpnext/accounts/report/account_balance/account_balance.py:21
 #: erpnext/accounts/report/budget_variance_report/budget_variance_report.py:83
-#: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.py:286
-#: erpnext/accounts/report/dimension_wise_accounts_balance_report/dimension_wise_accounts_balance_report.py:201
+#: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.py:287
+#: erpnext/accounts/report/dimension_wise_accounts_balance_report/dimension_wise_accounts_balance_report.py:202
 #: erpnext/accounts/report/financial_statements.py:650
 #: erpnext/accounts/report/general_and_payment_ledger_comparison/general_and_payment_ledger_comparison.js:30
 #: erpnext/accounts/report/general_and_payment_ledger_comparison/general_and_payment_ledger_comparison.py:190
@@ -1273,7 +1273,7 @@ msgstr ""
 #: erpnext/accounts/report/invalid_ledger_entries/invalid_ledger_entries.js:30
 #: erpnext/accounts/report/payment_ledger/payment_ledger.js:30
 #: erpnext/accounts/report/payment_ledger/payment_ledger.py:152
-#: erpnext/accounts/report/trial_balance/trial_balance.py:436
+#: erpnext/accounts/report/trial_balance/trial_balance.py:437
 #: erpnext/accounts/report/trial_balance_for_party/trial_balance_for_party.js:70
 #: erpnext/regional/doctype/uae_vat_account/uae_vat_account.json
 #: erpnext/stock/doctype/warehouse/warehouse.json
@@ -1383,7 +1383,7 @@ msgstr ""
 #: erpnext/accounts/doctype/ledger_merge/ledger_merge.json
 #: erpnext/accounts/doctype/ledger_merge_accounts/ledger_merge_accounts.json
 #: erpnext/accounts/report/financial_statements.py:661
-#: erpnext/accounts/report/trial_balance/trial_balance.py:443
+#: erpnext/accounts/report/trial_balance/trial_balance.py:444
 msgid "Account Name"
 msgstr ""
 
@@ -1395,7 +1395,7 @@ msgstr ""
 #: erpnext/accounts/doctype/account/account.json
 #: erpnext/accounts/doctype/account/account_tree.js:132
 #: erpnext/accounts/report/financial_statements.py:668
-#: erpnext/accounts/report/trial_balance/trial_balance.py:450
+#: erpnext/accounts/report/trial_balance/trial_balance.py:451
 msgid "Account Number"
 msgstr ""
 
@@ -3885,7 +3885,7 @@ msgstr ""
 #: erpnext/accounts/doctype/chart_of_accounts_importer/chart_of_accounts_importer.js:165
 #: erpnext/accounts/doctype/chart_of_accounts_importer/chart_of_accounts_importer.js:185
 #: erpnext/accounts/doctype/chart_of_accounts_importer/chart_of_accounts_importer.py:166
-#: erpnext/accounts/utils.py:1451 erpnext/public/js/setup_wizard.js:184
+#: erpnext/accounts/utils.py:1475 erpnext/public/js/setup_wizard.js:184
 msgid "All Accounts"
 msgstr ""
 
@@ -4165,11 +4165,11 @@ msgstr ""
 msgid "Allocated amount"
 msgstr ""
 
-#: erpnext/accounts/utils.py:616
+#: erpnext/accounts/utils.py:617
 msgid "Allocated amount cannot be greater than unadjusted amount"
 msgstr ""
 
-#: erpnext/accounts/utils.py:614
+#: erpnext/accounts/utils.py:615
 msgid "Allocated amount cannot be negative"
 msgstr ""
 
@@ -6199,11 +6199,11 @@ msgid "Asset {0} does not belong to company {1}"
 msgstr ""
 
 #: erpnext/assets/doctype/asset_movement/asset_movement.py:92
-msgid "Asset {0} does not belongs to the custodian {1}"
+msgid "Asset {0} does not belong to the custodian {1}"
 msgstr ""
 
 #: erpnext/assets/doctype/asset_movement/asset_movement.py:64
-msgid "Asset {0} does not belongs to the location {1}"
+msgid "Asset {0} does not belong to the location {1}"
 msgstr ""
 
 #: erpnext/assets/doctype/asset_capitalization/asset_capitalization.py:669
@@ -6360,7 +6360,7 @@ msgstr ""
 msgid "At row #{0}: you have selected the Difference Account {1}, which is a Cost of Goods Sold type account. Please select a different account"
 msgstr ""
 
-#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:945
+#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:1004
 msgid "At row {0}: Batch No is mandatory for Item {1}"
 msgstr ""
 
@@ -6368,11 +6368,11 @@ msgstr ""
 msgid "At row {0}: Parent Row No cannot be set for item {1}"
 msgstr ""
 
-#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:930
+#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:989
 msgid "At row {0}: Qty is mandatory for the batch {1}"
 msgstr ""
 
-#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:937
+#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:996
 msgid "At row {0}: Serial No is mandatory for Item {1}"
 msgstr ""
 
@@ -8040,11 +8040,11 @@ msgstr ""
 msgid "Batch No"
 msgstr ""
 
-#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:948
+#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:1007
 msgid "Batch No is mandatory"
 msgstr ""
 
-#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:2760
+#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:2819
 msgid "Batch No {0} does not exists"
 msgstr ""
 
@@ -8067,7 +8067,7 @@ msgstr ""
 msgid "Batch Nos"
 msgstr ""
 
-#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:1512
+#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:1571
 msgid "Batch Nos are created successfully"
 msgstr ""
 
@@ -10686,12 +10686,12 @@ msgstr ""
 msgid "Closing"
 msgstr ""
 
-#: erpnext/accounts/report/trial_balance/trial_balance.py:499
+#: erpnext/accounts/report/trial_balance/trial_balance.py:500
 #: erpnext/accounts/report/trial_balance_for_party/trial_balance_for_party.py:226
 msgid "Closing (Cr)"
 msgstr ""
 
-#: erpnext/accounts/report/trial_balance/trial_balance.py:492
+#: erpnext/accounts/report/trial_balance/trial_balance.py:493
 #: erpnext/accounts/report/trial_balance_for_party/trial_balance_for_party.py:219
 msgid "Closing (Dr)"
 msgstr ""
@@ -13073,7 +13073,7 @@ msgstr ""
 msgid "Could not find path for "
 msgstr ""
 
-#: erpnext/accounts/report/dimension_wise_accounts_balance_report/dimension_wise_accounts_balance_report.py:124
+#: erpnext/accounts/report/dimension_wise_accounts_balance_report/dimension_wise_accounts_balance_report.py:125
 #: erpnext/accounts/report/financial_statements.py:242
 msgid "Could not retrieve information for {0}."
 msgstr ""
@@ -13670,7 +13670,7 @@ msgstr ""
 #: erpnext/accounts/report/general_ledger/general_ledger.html:87
 #: erpnext/accounts/report/purchase_register/purchase_register.py:241
 #: erpnext/accounts/report/sales_register/sales_register.py:277
-#: erpnext/accounts/report/trial_balance/trial_balance.py:485
+#: erpnext/accounts/report/trial_balance/trial_balance.py:486
 #: erpnext/accounts/report/trial_balance_for_party/trial_balance_for_party.py:212
 #: erpnext/accounts/report/voucher_wise_balance/voucher_wise_balance.py:34
 msgid "Credit"
@@ -14023,20 +14023,20 @@ msgstr ""
 #: erpnext/accounts/report/accounts_receivable_summary/accounts_receivable_summary.py:205
 #: erpnext/accounts/report/bank_reconciliation_statement/bank_reconciliation_statement.py:101
 #: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.js:118
-#: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.py:293
+#: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.py:294
 #: erpnext/accounts/report/customer_ledger_summary/customer_ledger_summary.py:208
-#: erpnext/accounts/report/dimension_wise_accounts_balance_report/dimension_wise_accounts_balance_report.py:208
+#: erpnext/accounts/report/dimension_wise_accounts_balance_report/dimension_wise_accounts_balance_report.py:209
 #: erpnext/accounts/report/financial_statements.html:29
 #: erpnext/accounts/report/financial_statements.py:679
 #: erpnext/accounts/report/general_ledger/general_ledger.js:147
 #: erpnext/accounts/report/gross_profit/gross_profit.py:443
 #: erpnext/accounts/report/item_wise_sales_register/item_wise_sales_register.py:709
 #: erpnext/accounts/report/payment_ledger/payment_ledger.py:220
-#: erpnext/accounts/report/profitability_analysis/profitability_analysis.py:175
+#: erpnext/accounts/report/profitability_analysis/profitability_analysis.py:176
 #: erpnext/accounts/report/purchase_register/purchase_register.py:229
 #: erpnext/accounts/report/sales_register/sales_register.py:265
 #: erpnext/accounts/report/trial_balance/trial_balance.js:76
-#: erpnext/accounts/report/trial_balance/trial_balance.py:457
+#: erpnext/accounts/report/trial_balance/trial_balance.py:458
 #: erpnext/accounts/report/trial_balance_for_party/trial_balance_for_party.py:233
 #: erpnext/accounts/workspace/accounting/accounting.json
 #: erpnext/buying/doctype/purchase_order/purchase_order.json
@@ -14130,7 +14130,7 @@ msgstr ""
 
 #: erpnext/accounts/doctype/payment_entry/payment_entry.py:1665
 #: erpnext/accounts/doctype/payment_entry/payment_entry.py:1733
-#: erpnext/accounts/utils.py:2326
+#: erpnext/accounts/utils.py:2350
 msgid "Currency for {0} must be {1}"
 msgstr ""
 
@@ -15397,7 +15397,7 @@ msgstr ""
 #: erpnext/accounts/report/general_ledger/general_ledger.html:86
 #: erpnext/accounts/report/purchase_register/purchase_register.py:240
 #: erpnext/accounts/report/sales_register/sales_register.py:276
-#: erpnext/accounts/report/trial_balance/trial_balance.py:478
+#: erpnext/accounts/report/trial_balance/trial_balance.py:479
 #: erpnext/accounts/report/trial_balance_for_party/trial_balance_for_party.py:205
 #: erpnext/accounts/report/voucher_wise_balance/voucher_wise_balance.py:27
 msgid "Debit"
@@ -19130,7 +19130,7 @@ msgstr ""
 
 #: erpnext/assets/doctype/asset_movement/asset_movement.py:79
 #: erpnext/assets/doctype/asset_movement/asset_movement.py:100
-msgid "Employee {0} does not belongs to the company {1}"
+msgid "Employee {0} does not belong to the company {1}"
 msgstr ""
 
 #: erpnext/manufacturing/doctype/job_card/job_card.py:314
@@ -20090,7 +20090,7 @@ msgstr ""
 #: erpnext/accounts/report/account_balance/account_balance.js:28
 #: erpnext/accounts/report/deferred_revenue_and_expense/deferred_revenue_and_expense.js:89
 #: erpnext/accounts/report/profit_and_loss_statement/profit_and_loss_statement.py:178
-#: erpnext/accounts/report/profitability_analysis/profitability_analysis.py:189
+#: erpnext/accounts/report/profitability_analysis/profitability_analysis.py:190
 msgid "Expense"
 msgstr ""
 
@@ -21082,11 +21082,11 @@ msgstr ""
 msgid "Fiscal Year {0} Does Not Exist"
 msgstr ""
 
-#: erpnext/accounts/report/trial_balance/trial_balance.py:47
+#: erpnext/accounts/report/trial_balance/trial_balance.py:48
 msgid "Fiscal Year {0} does not exist"
 msgstr ""
 
-#: erpnext/accounts/report/trial_balance/trial_balance.py:41
+#: erpnext/accounts/report/trial_balance/trial_balance.py:42
 msgid "Fiscal Year {0} is required"
 msgstr ""
 
@@ -21749,7 +21749,7 @@ msgstr ""
 msgid "From Date and To Date lie in different Fiscal Year"
 msgstr ""
 
-#: erpnext/accounts/report/trial_balance/trial_balance.py:62
+#: erpnext/accounts/report/trial_balance/trial_balance.py:63
 #: erpnext/buying/report/item_wise_purchase_history/item_wise_purchase_history.py:13
 #: erpnext/selling/report/item_wise_sales_history/item_wise_sales_history.py:14
 #: erpnext/stock/report/reserved_stock/reserved_stock.py:29
@@ -21770,7 +21770,7 @@ msgstr ""
 msgid "From Date must be before To Date"
 msgstr ""
 
-#: erpnext/accounts/report/trial_balance/trial_balance.py:66
+#: erpnext/accounts/report/trial_balance/trial_balance.py:67
 msgid "From Date should be within the Fiscal Year. Assuming From Date = {0}"
 msgstr ""
 
@@ -22918,7 +22918,7 @@ msgstr ""
 msgid "Gross Profit"
 msgstr ""
 
-#: erpnext/accounts/report/profitability_analysis/profitability_analysis.py:196
+#: erpnext/accounts/report/profitability_analysis/profitability_analysis.py:197
 msgid "Gross Profit / Loss"
 msgstr ""
 
@@ -24821,7 +24821,7 @@ msgstr ""
 #: erpnext/accounts/report/account_balance/account_balance.js:27
 #: erpnext/accounts/report/financial_statements.py:756
 #: erpnext/accounts/report/profit_and_loss_statement/profit_and_loss_statement.py:176
-#: erpnext/accounts/report/profitability_analysis/profitability_analysis.py:182
+#: erpnext/accounts/report/profitability_analysis/profitability_analysis.py:183
 msgid "Income"
 msgstr ""
 
@@ -28225,7 +28225,7 @@ msgstr ""
 msgid "Journal Entries"
 msgstr ""
 
-#: erpnext/accounts/utils.py:1013
+#: erpnext/accounts/utils.py:1014
 msgid "Journal Entries {0} are un-linked"
 msgstr ""
 
@@ -32070,7 +32070,7 @@ msgid "Net Change in Accounts Receivable"
 msgstr ""
 
 #: erpnext/accounts/report/cash_flow/cash_flow.py:128
-#: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.py:253
+#: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.py:254
 msgid "Net Change in Cash"
 msgstr ""
 
@@ -33744,12 +33744,12 @@ msgstr ""
 msgid "Opening & Closing"
 msgstr ""
 
-#: erpnext/accounts/report/trial_balance/trial_balance.py:471
+#: erpnext/accounts/report/trial_balance/trial_balance.py:472
 #: erpnext/accounts/report/trial_balance_for_party/trial_balance_for_party.py:198
 msgid "Opening (Cr)"
 msgstr ""
 
-#: erpnext/accounts/report/trial_balance/trial_balance.py:464
+#: erpnext/accounts/report/trial_balance/trial_balance.py:465
 #: erpnext/accounts/report/trial_balance_for_party/trial_balance_for_party.py:191
 msgid "Opening (Dr)"
 msgstr ""
@@ -36134,7 +36134,7 @@ msgstr ""
 msgid "Payment Entries"
 msgstr ""
 
-#: erpnext/accounts/utils.py:1101
+#: erpnext/accounts/utils.py:1102
 msgid "Payment Entries {0} are un-linked"
 msgstr ""
 
@@ -36182,7 +36182,7 @@ msgstr ""
 msgid "Payment Entry already exists"
 msgstr ""
 
-#: erpnext/accounts/utils.py:608
+#: erpnext/accounts/utils.py:609
 msgid "Payment Entry has been modified after you pulled it. Please pull it again."
 msgstr ""
 
@@ -36227,7 +36227,7 @@ msgstr ""
 msgid "Payment Gateway Account"
 msgstr ""
 
-#: erpnext/accounts/utils.py:1345
+#: erpnext/accounts/utils.py:1369
 msgid "Payment Gateway Account not created, please create one manually."
 msgstr ""
 
@@ -36580,7 +36580,7 @@ msgstr ""
 msgid "Payment URL"
 msgstr ""
 
-#: erpnext/accounts/utils.py:1089
+#: erpnext/accounts/utils.py:1090
 msgid "Payment Unlink Error"
 msgstr ""
 
@@ -37520,7 +37520,7 @@ msgstr ""
 msgid "Please cancel and amend the Payment Entry"
 msgstr ""
 
-#: erpnext/accounts/utils.py:1088
+#: erpnext/accounts/utils.py:1089
 msgid "Please cancel payment entry manually first"
 msgstr ""
 
@@ -38358,7 +38358,7 @@ msgstr ""
 msgid "Please set default Cash or Bank account in Mode of Payments {}"
 msgstr ""
 
-#: erpnext/accounts/utils.py:2321
+#: erpnext/accounts/utils.py:2345
 msgid "Please set default Exchange Gain/Loss Account in Company {}"
 msgstr ""
 
@@ -38375,7 +38375,7 @@ msgid "Please set default cost of goods sold account in company {0} for booking 
 msgstr ""
 
 #: erpnext/accounts/doctype/payment_entry/payment_entry.py:274
-#: erpnext/accounts/utils.py:1110
+#: erpnext/accounts/utils.py:1111
 msgid "Please set default {0} in Company {1}"
 msgstr ""
 
@@ -38953,7 +38953,7 @@ msgid "Preview Required Materials"
 msgstr ""
 
 #: erpnext/accounts/report/balance_sheet/balance_sheet.py:175
-#: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.py:138
+#: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.py:139
 msgid "Previous Financial Year is not closed"
 msgstr ""
 
@@ -47970,7 +47970,7 @@ msgstr ""
 msgid "Select"
 msgstr ""
 
-#: erpnext/accounts/report/profitability_analysis/profitability_analysis.py:21
+#: erpnext/accounts/report/profitability_analysis/profitability_analysis.py:22
 msgid "Select Accounting Dimension."
 msgstr ""
 
@@ -48654,7 +48654,7 @@ msgstr ""
 msgid "Serial No Range"
 msgstr ""
 
-#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:1985
+#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:2044
 msgid "Serial No Reserved"
 msgstr ""
 
@@ -48701,7 +48701,7 @@ msgstr ""
 msgid "Serial No and Batch Traceability"
 msgstr ""
 
-#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:940
+#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:999
 msgid "Serial No is mandatory"
 msgstr ""
 
@@ -48730,7 +48730,7 @@ msgstr ""
 msgid "Serial No {0} does not exist"
 msgstr ""
 
-#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:2754
+#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:2813
 msgid "Serial No {0} does not exists"
 msgstr ""
 
@@ -48779,7 +48779,7 @@ msgstr ""
 msgid "Serial Nos and Batches"
 msgstr ""
 
-#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:1461
+#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:1520
 msgid "Serial Nos are created successfully"
 msgstr ""
 
@@ -48857,11 +48857,11 @@ msgstr ""
 msgid "Serial and Batch Bundle"
 msgstr ""
 
-#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:1682
+#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:1741
 msgid "Serial and Batch Bundle created"
 msgstr ""
 
-#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:1748
+#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:1807
 msgid "Serial and Batch Bundle updated"
 msgstr ""
 
@@ -54704,7 +54704,7 @@ msgstr ""
 msgid "The Serial No at Row #{0}: {1} is not available in warehouse {2}."
 msgstr ""
 
-#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:1982
+#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:2041
 msgid "The Serial No {0} is reserved against the {1} {2} and cannot be used for any other transaction."
 msgstr ""
 
@@ -55139,7 +55139,7 @@ msgstr ""
 msgid "There were errors while sending email. Please try again."
 msgstr ""
 
-#: erpnext/accounts/utils.py:1086
+#: erpnext/accounts/utils.py:1087
 msgid "There were issues unlinking payment entry {0}."
 msgstr ""
 
@@ -55856,7 +55856,7 @@ msgstr ""
 msgid "To Date must be greater than From Date"
 msgstr ""
 
-#: erpnext/accounts/report/trial_balance/trial_balance.py:75
+#: erpnext/accounts/report/trial_balance/trial_balance.py:76
 msgid "To Date should be within the Fiscal Year. Assuming To Date = {0}"
 msgstr ""
 
@@ -56134,7 +56134,7 @@ msgstr ""
 
 #: erpnext/accounts/report/financial_statements.py:604
 #: erpnext/accounts/report/general_ledger/general_ledger.py:310
-#: erpnext/accounts/report/trial_balance/trial_balance.py:292
+#: erpnext/accounts/report/trial_balance/trial_balance.py:293
 msgid "To use a different finance book, please uncheck 'Include Default FB Entries'"
 msgstr ""
 
@@ -56224,15 +56224,15 @@ msgstr ""
 #: erpnext/accounts/report/accounts_receivable/accounts_receivable.html:74
 #: erpnext/accounts/report/accounts_receivable/accounts_receivable.html:235
 #: erpnext/accounts/report/accounts_receivable/accounts_receivable.html:273
-#: erpnext/accounts/report/dimension_wise_accounts_balance_report/dimension_wise_accounts_balance_report.py:229
+#: erpnext/accounts/report/dimension_wise_accounts_balance_report/dimension_wise_accounts_balance_report.py:230
 #: erpnext/accounts/report/financial_statements.py:700
 #: erpnext/accounts/report/general_ledger/general_ledger.html:132
 #: erpnext/accounts/report/general_ledger/general_ledger.py:398
 #: erpnext/accounts/report/item_wise_sales_register/item_wise_sales_register.py:701
-#: erpnext/accounts/report/profitability_analysis/profitability_analysis.py:93
-#: erpnext/accounts/report/profitability_analysis/profitability_analysis.py:98
-#: erpnext/accounts/report/trial_balance/trial_balance.py:358
+#: erpnext/accounts/report/profitability_analysis/profitability_analysis.py:94
+#: erpnext/accounts/report/profitability_analysis/profitability_analysis.py:99
 #: erpnext/accounts/report/trial_balance/trial_balance.py:359
+#: erpnext/accounts/report/trial_balance/trial_balance.py:360
 #: erpnext/buying/doctype/purchase_order/purchase_order.json
 #: erpnext/buying/doctype/supplier_quotation/supplier_quotation.json
 #: erpnext/crm/doctype/opportunity/opportunity.json
@@ -57045,8 +57045,8 @@ msgstr ""
 msgid "Total percentage against cost centers should be 100"
 msgstr ""
 
-#: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.py:745
 #: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.py:746
+#: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.py:747
 #: erpnext/accounts/report/financial_statements.py:346
 #: erpnext/accounts/report/financial_statements.py:347
 msgid "Total {0} ({1})"
@@ -57886,8 +57886,8 @@ msgstr ""
 
 #: erpnext/accounts/report/balance_sheet/balance_sheet.py:77
 #: erpnext/accounts/report/balance_sheet/balance_sheet.py:78
-#: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.py:86
 #: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.py:87
+#: erpnext/accounts/report/consolidated_financial_statement/consolidated_financial_statement.py:88
 msgid "Unclosed Fiscal Years Profit / Loss (Credit)"
 msgstr ""
 
@@ -59537,7 +59537,7 @@ msgstr ""
 msgid "Voucher No"
 msgstr ""
 
-#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:1166
+#: erpnext/stock/doctype/serial_and_batch_bundle/serial_and_batch_bundle.py:1225
 msgid "Voucher No is mandatory"
 msgstr ""
 
@@ -61646,7 +61646,7 @@ msgstr ""
 msgid "{0} '{1}' is disabled"
 msgstr ""
 
-#: erpnext/accounts/utils.py:186
+#: erpnext/accounts/utils.py:187
 msgid "{0} '{1}' not in Fiscal Year {2}"
 msgstr ""
 
@@ -61678,7 +61678,7 @@ msgstr ""
 msgid "{0} Digest"
 msgstr ""
 
-#: erpnext/accounts/utils.py:1405
+#: erpnext/accounts/utils.py:1429
 msgid "{0} Number {1} is already used in {2} {3}"
 msgstr ""
 
@@ -61793,7 +61793,7 @@ msgstr ""
 msgid "{0} entered twice {1} in Item Taxes"
 msgstr ""
 
-#: erpnext/accounts/utils.py:123
+#: erpnext/accounts/utils.py:124
 #: erpnext/projects/doctype/activity_cost/activity_cost.py:40
 msgid "{0} for {1}"
 msgstr ""
@@ -62095,7 +62095,7 @@ msgstr ""
 msgid "{0} {1} is not associated with {2} {3}"
 msgstr ""
 
-#: erpnext/accounts/utils.py:119
+#: erpnext/accounts/utils.py:120
 msgid "{0} {1} is not in any active Fiscal Year"
 msgstr ""
 
